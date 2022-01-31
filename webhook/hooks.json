@@ -1,0 +1,17 @@
+[
+  {
+    "id": "test-file-webhook",
+    "execute-command": "/bin/ls",
+    "command-working-directory": "/app/files/",
+    "pass-file-to-command":
+    [
+      {
+      	"source": "payload",
+ 	      "name": "binary",
+      	"envname": "ENV_VARIABLE", 
+      	"base64decode": true
+      }
+    ],
+    "include-command-output-in-response": true
+  }
+]
